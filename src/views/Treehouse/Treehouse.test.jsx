@@ -9,7 +9,7 @@ jest.mock('../../hooks/useAuth', () => {
   return {
     useAuth: function () {
       return {
-        user: { email: 'test@example.com' },
+        user: { email: 'test@example.com', password: '123456' },
         logout: mockLogout,
       };
     },
