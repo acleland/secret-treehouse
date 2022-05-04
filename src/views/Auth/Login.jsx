@@ -29,7 +29,7 @@ export default function Login() {
     // See https://v5.reactrouter.com/web/api/history for the appropriate method to use
 
     if (loginWasSuccessful) {
-      history.replace('/treehouse');
+      history.replace(from);
     } else {
       setError('Incorrect login credentials');
     }
@@ -44,6 +44,7 @@ export default function Login() {
           id="email"
           name="email"
           type="email"
+          value={formState.email}
           onChange={handleFormChange}
         />{' '}
         <label htmlFor={'password'}>Password</label>
@@ -51,6 +52,7 @@ export default function Login() {
           id="password"
           name="password"
           type="password"
+          value={formState.password}
           onChange={handleFormChange}
         />
         <button type="submit" aria-label="Sign In">
